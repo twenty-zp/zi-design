@@ -6,10 +6,13 @@
 ## 中文排版参考资料
 
 [Justfont](http://blog.justfont.com/)
+
 [Digidea's Blog](http://blog.typeland.com/)
+
 [Type is Beautiful](http://www.typeisbeautiful.com/)
--
+
 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
+
 [Requirements for Chinese Text Layout 中文排版需求](http://w3c.github.io/clreq/#introduction)
 
 
