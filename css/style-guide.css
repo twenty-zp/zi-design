@@ -24,7 +24,11 @@ xPatterns
 }
 
 .guide_title {
-  font-family: 'Montserrat-Light';
+  font-family: 'Montserrat-Regular',PingFang SC,-apple-system;
+}
+
+.guide_title span{
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 768px) {
@@ -576,6 +580,7 @@ form fieldset:nth-of-type(2){
 
 
 .checkbox-label {
+  color: #464d5c;
   padding-left: 24px;
   -webkit-user-select: none;
   -moz-user-select: none;
