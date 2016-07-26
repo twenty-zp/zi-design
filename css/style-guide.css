@@ -23,6 +23,10 @@ xPatterns
   height: 360px;
 }
 
+.guide_title {
+  font-family: 'Montserrat-Light';
+}
+
 @media only screen and (max-width: 768px) {
   #colors ul .cd-box {
     height: 420px
@@ -219,8 +223,44 @@ xButtons
 
 -------------------------------- */
 
-#buttons .cd-box {
+#buttons .cd-box:nth-of-type(1) {
   height: auto;
+  padding: 0px;
+  overflow: hidden;
+}
+
+#buttons .cd-box:nth-of-type(2) {
+  height: auto;
+  margin-top: -2px;
+}
+
+#buttons .cd-box .btn-box {
+  width: 33.33%;
+  float: left;
+  display: inline-block;
+  height: 198px;
+  box-shadow: 1px 1px 0px 0px #D0D3D9;
+}
+
+#buttons .cd-box .btn-box:nth-of-type(7) {
+  background-color: rgba(70,77,92,.9);
+}
+
+#buttons .cd-box .btn-box:nth-of-type(7) span {
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  #buttons .cd-box .btn-box {
+    width:50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #buttons .cd-box .btn-box {
+    width:100%;
+    margin-left: 0px;
+  }
 }
 
 .btn {
@@ -231,7 +271,7 @@ xButtons
   color: #fff;
   font-size: 14px;
   letter-spacing: 2px;
-  font-family: 'HYQiHei-75',sans-serif;;
+  font-family: 'Montserrat-Regular','HYQiHei-75',sans-serif;;
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -239,6 +279,16 @@ xButtons
   cursor: pointer;
   -webkit-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
+}
+
+.btn-box span {
+  text-align: center;
+  display: block;
+  margin-bottom: 2em;
+  font-family: -apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #6d7075;
 }
 
 .btn:focus {
@@ -266,12 +316,30 @@ xButtons
   box-shadow: inset 0 1px 2px rgba(0,0,0,.15);
 }
 
+.btn-box .btn-branding {
+  color: white;
+  font-size: 14px;
+  padding: 15px 22px 15px 50px;
+  letter-spacing: 0.78px;
+}
+
+.btn-box .btn .icon-Apple::before {
+  left: 24px;
+  top: 13px;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+}
+
 .btn-branding{
+  padding: 16px 37px 16px 40px;
+  border-radius: 100px;
   background: #464d5c;
   border: 1px solid #3e4853;
   box-shadow: inset 0 1px 0 hsla(0,0%,100%,.05),0 1px 2px rgba(0,0,0,.05);
   text-shadow: 0 1px 0 #3e4853;
 }
+
 .btn-branding:hover{
   background-color: #656c7c;
   border: 1px solid #464d5c;
@@ -283,6 +351,7 @@ xButtons
 }
 
 .btn-delete{
+  padding: 8px 14px 7px 17px;
   background-color: #f2555b;
   border: 1px solid #de464c;
   box-shadow: inset 0 1px 0 hsla(0,0%,100%,.05),0 1px 2px rgba(0,0,0,.05);
@@ -299,6 +368,7 @@ xButtons
 }
 
 .btn-cancel {
+  padding: 8px 14px 7px 17px;
   color: #464d5c;
   border: 1px solid rgba(185,193,199,.5);
   background-color: transparent;
@@ -317,6 +387,9 @@ xButtons
   color: #3a7bf7;
   background-color: transparent;
   border: 1px solid #3a7bf7;
+  padding: 11px 25px 11px 27px;
+  border-radius: 100px;
+  font-size: 14px;
 }
 
 .btn-login:hover {
@@ -331,6 +404,7 @@ xButtons
 }
 
 .btn-article-preview {
+  padding: 8px 20px 7px 23px;
   border: 1px solid #7b8994;
   color: #7b8994;
   letter-spacing: 4px;
@@ -349,6 +423,7 @@ xButtons
 }
 
 .btn-template-preview {
+  padding: 8px 20px 7px 23px;
   background-color: rgba(255,255,255,0);
   border: 1px solid hsla(0,0%,100%,.4);
   color: hsla(0,0%,100%,.8);
@@ -368,7 +443,7 @@ xButtons
 
 @media only screen and (min-width: 768px) {
   .btn {
-    font-size: 1.6rem;
+    font-size: 14px;
   }
 }
 
@@ -850,6 +925,9 @@ section:nth-of-type(5) h2::before {
 section:nth-of-type(6) h2::before {
   content: '6. ';
 }
+section:nth-of-type(7) h2::before {
+  content: '7. ';
+}
 @media only screen and (min-width: 768px) {
   section {
     margin: 3em 0 5em;
@@ -1242,11 +1320,12 @@ section:nth-of-type(6) h2::before {
   border-top-right-radius: 0;
 }
 .cd-buttons button {
-  margin: .4em;
+  margin: 4em auto 2em auto;
+  display: -webkit-box;
 }
 @media only screen and (min-width: 1024px) {
   .cd-buttons button {
-    margin: 1em;
+    margin: 4em auto 2em auto;
   }
 }
 

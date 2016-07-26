@@ -30,12 +30,15 @@ jQuery(document).ready(function($){
 	/*******************
 		buttons
 	********************/
-	var buttonsWrapper = $('#buttons .cd-box'),
-		buttonsHtml = buttonsWrapper.html(),
-		containerHtml = $('<div class="cd-box"></div>').insertAfter(buttonsWrapper),
-		buttonsHtmlText = buttonsHtml.split('</button>');
 
-	$.map(buttonsHtmlText, function(value){
+
+	var btnAtrr = [],
+			containerHtml = $('<div class="cd-box" id="label-container"></div>').insertAfter('#buttons .cd-box');
+	$('#buttons .cd-box .btn-box').each(function(){
+		btnAtrr.push($(this).get(0).innerHTML)
+	});
+
+	$.map(btnAtrr, function(value){
 		if(value.indexOf('button') >= 0 ) {
 			var splitText = value.split('class="'),
 				block1 = splitText[0]+'class="';
@@ -45,8 +48,12 @@ jQuery(document).ready(function($){
 				spanElement = $('<span></span>').text(block2[0]);
 			spanElement.appendTo(wrapperElement);
 			wrapperElement.appendTo(containerHtml);
-			wrapperElement.append('"'+block2[1]+'&lt;/button&gt;');
+			wrapperElement.append('"' + block2[1]);
+			wrapperElement.append('&lt;button&gt;');
 		}
+
+
+
 	});
 
 	/*******************
@@ -55,8 +62,7 @@ jQuery(document).ready(function($){
 
 	//set a label for each color swatch
 	$('#typography h1').each(function(){
-		// var actual = $(this);
-		// $('<span>'+actual.children('span')css("background-color")+'</span>').insertAfter(actual);
+
 		var heading = $(this);
 		var headingDescriptionText = $(this).children('span')
 		function setTypography(element, textElement) {
@@ -72,35 +78,6 @@ jQuery(document).ready(function($){
 		});
 
 	});
-
-	// var heading = $('#typography h1'),
-	// 	headingDescriptionText = heading.children('span'),
-	// 	body = heading.next('p'),
-	// 	bodyDescriptionText = body.children('span').eq(0);
-	//
-	// setTypography(heading, headingDescriptionText);
-	// setTypography(body, bodyDescriptionText);
-	// $(window).on('resize', function(){
-	// 	setTypography(heading, headingDescriptionText);
-	// 	setTypography(body, bodyDescriptionText);
-	// });
-	//
-
-
-	// var	body = heading.next('p'),
-	// var	bodyDescriptionText = body.children('span').eq(0);
-	// setTypography(body, bodyDescriptionText);
-	//
-	// $(window).on('resize', function(){
-	// 	setTypography(heading, headingDescriptionText);
-	// 	setTypography(body, bodyDescriptionText);
-	// });
-	//
-	// function setTypography(element, textElement) {
-	// 	var fontSize = Math.round(element.css('font-size').replace('px',''))+'px',
-	// 		fontFamily = (element.css('font-family').split(','))[0].replace(/\'/g, '').replace(/\"/g, '');
-	// 	textElement.text(fontFamily+' '+fontSize );
-	// }
 
 	/*******************
 		main  navigation
