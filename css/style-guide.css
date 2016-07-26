@@ -147,7 +147,7 @@ xPage title
 
 -------------------------------- */
 main > h1 {
-  color: #19191a;
+  color: #464d5c;
 }
 @media only screen and (min-width: 1600px) {
   main > h1 {
@@ -204,7 +204,7 @@ section > h2::before {
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  color: #58585b;
+  color: #6d7075;
 }
 p a {
   color: #5f8ee4;
@@ -453,7 +453,7 @@ xButtons
 
 .cd-buttons .cd-box:nth-of-type(2) span {
   /* CSS class name color */
-  color: #5f8ee4;
+  color: #3a7bf7;
 }
 
 /* --------------------------------
@@ -933,6 +933,9 @@ section:nth-of-type(6) h2::before {
 section:nth-of-type(7) h2::before {
   content: '7. ';
 }
+section:nth-of-type(8) h2::before {
+  content: '8. ';
+}
 @media only screen and (min-width: 768px) {
   section {
     margin: 3em 0 5em;
@@ -1083,17 +1086,21 @@ section:nth-of-type(7) h2::before {
 .cd-typography .cd-box,
 .cd-buttons .cd-box,
 .cd-icons .cd-box,
-.cd-form .cd-box {
+.cd-form .cd-box,
+.cd-component .cd-box,
+.cd-animation .cd-box {
   padding: 1em;
 }
-@media only screen and (min-width: 768px) {
+/*@media only screen and (min-width: 768px) {
   .cd-typography .cd-box .cd-box,
   .cd-buttons .cd-box .cd-box,
   .cd-icons .cd-box .cd-box,
-  .cd-form .cd-box .cd-box {
+  .cd-form .cd-box,
+  .cd-component .cd-box,
+  .cd-animation .cd-box {
     padding: 2em;
   }
-}
+}*/
 
 /* xTypography section - basic style */
 
@@ -1535,6 +1542,32 @@ section:nth-of-type(7) h2::before {
 .cd-form select::-ms-expand {
   display: none;
 }
+
+/* xAnimation section - basic style */
+.quote {
+  font-family: 'Montserrat-Light';
+  font-size: 24px;
+  text-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  line-height: 32px;
+  display: block;
+  margin-top: 10px;
+  color: #3a7bf7;
+  margin-bottom: 26px;
+}
+
+.easing_label{
+  background-color: #f6f6f6;
+  padding: 3px 7px 3px 7px;
+  border-radius: 3px;
+  color: #464d5c;
+}
+
+.animation_text{
+  color:#6d7075;
+}
+
 
 
 /*Web Font Area*/
