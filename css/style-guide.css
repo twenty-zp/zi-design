@@ -494,10 +494,10 @@ input[type=text]:focus, select:focus {
   outline: none;
 }
 
-.success input[type=text] {
+.input-success input[type=text] {
   border-color: #45CE5E;
 }
-.alert input[type=text] {
+.input-alert input[type=text] {
   border-color: #f2555b;
 }
 
@@ -519,7 +519,7 @@ form fieldset:nth-of-type(2){
   margin-top: 25px;
 }
 
-.alert {
+.input-alert {
   /*display: inline-block;*/
   cursor: inherit !important;
   position: relative;
@@ -528,7 +528,7 @@ form fieldset:nth-of-type(2){
   margin-top: -5px;
 }
 
-.alert:before {
+.input-alert:before {
   font-size: 16px;
   right: -240px;
   position: relative;
@@ -536,7 +536,7 @@ form fieldset:nth-of-type(2){
   -webkit-transition: border-color .3s ease-in-out;
   transition: border-color .3s ease-in-out;
 }
-.alert:after {
+.input-alert:after {
   content: 'Please show me something real';
   font-size: 12px;
   left: -256px;
@@ -548,7 +548,7 @@ form fieldset:nth-of-type(2){
   transition: border-color .3s ease-in-out;
 }
 
-.success {
+.input-success {
   /*display: inline-block;*/
   cursor: inherit !important;
   position: relative;
@@ -557,7 +557,7 @@ form fieldset:nth-of-type(2){
   margin-top: 11px;
 }
 
-.success::before{
+.input-success::before{
   font-size: 16px;
   right: -240px;
   position: relative;
@@ -566,7 +566,7 @@ form fieldset:nth-of-type(2){
   transition: border-color .3s ease-in-out;
 }
 
-.success:after {
+.input-success:after {
   content: '验证码正确';
   font-size: 12px;
   left: -256px;
@@ -936,6 +936,9 @@ section:nth-of-type(7) h2::before {
 section:nth-of-type(8) h2::before {
   content: '8. ';
 }
+section:nth-of-type(9) h2::before {
+  content: '9. ';
+}
 @media only screen and (min-width: 768px) {
   section {
     margin: 3em 0 5em;
@@ -1090,6 +1093,7 @@ section:nth-of-type(8) h2::before {
 .cd-component .cd-box,
 .cd-animation .cd-box,
 .cd-component .cd-box,
+.cd-illustration.cd-box,
 .animation-box {
   padding: 2em;
 }
@@ -1101,6 +1105,7 @@ section:nth-of-type(8) h2::before {
   .cd-component .cd-box,
   .cd-animation .cd-box,
   .cd-component .cd-box,
+  .cd-illustration.cd-box,
   .animation-box  {
     padding: 1em;
   }
@@ -1534,6 +1539,10 @@ section:nth-of-type(8) h2::before {
 }
 
 /* xForm section - basic style */
+#form .cd-box:nth-of-type(2) {
+  height: auto;
+  margin-top: -1px;
+}
 .cd-form input[type=text],
 .cd-form .cd-input-wrapper {
   margin: 1em;
@@ -1715,7 +1724,21 @@ section:nth-of-type(8) h2::before {
   }
 }
 
+/* xComponent section - basic style */
 
+#component .cd-box {
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.component-box {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  height: 510px;
+  box-shadow: 1px 1px 0px 0px #D0D3D9;
+}
 
 /*Web Font Area*/
 

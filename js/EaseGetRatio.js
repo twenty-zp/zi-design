@@ -159,14 +159,16 @@ var offset = 100;
 var target = { y: 0 };
 var tween, points = [];
 
-for (var i = 0; i<5;i++){
-  var newEase = easeArray[i]
-  for (var a = 0; a<99; a++){
-    var bar = $("<div/>", {class:"graph_bar"}).appendTo(".animation-box:eq("+i+") .animation_container .graph_container")
-    TweenLite.set(bar, {x:a * barWidth, scaleY:newEase.getRatio(a/99), transformOrigin:"left bottom" });
-  }
 
-}
+// ################## 柱状图
+// for (var i = 0; i<5;i++){
+//   var newEase = easeArray[i]
+//   for (var a = 0; a<99; a++){
+//     var bar = $("<div/>", {class:"graph_bar"}).appendTo(".animation-box:eq("+i+") .animation_container .graph_container")
+//     TweenLite.set(bar, {x:a * barWidth, scaleY:newEase.getRatio(a/99), transformOrigin:"left bottom" });
+//   }
+//
+// }
 
 $('.animation-box').each(function(){
   $(this).find('.play_animation').on('click', function(){
