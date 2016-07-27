@@ -150,7 +150,7 @@ BezierCurve = {
 /* EaseGetRatio - Draw a Easing Graph Origin by Blake Bowen */
 
 var durationTime = 0.5
-var size = 200;
+var size = 175;
 var barWidth = 2
 var easeArray = [BezierCurve.easeLinear,BezierCurve.ease,BezierCurve.easeInOut,BezierCurve.easeOutQuint,BezierCurve.easeModal]
 
@@ -172,11 +172,11 @@ var tween, points = [];
 
 $('.animation-box').each(function(){
   $(this).find('.play_animation').on('click', function(){
-    var indexnum = $(this).parent().index()
+    var indexnum = $(this).parent().parent().index()
     var poly = $(this).parent().find('.graph_bezierline');
 
     //加 Timing Function
-    var transitionCSS = "all "+durationTime+"s cubic-bezier("+bezierCurveArray[indexnum].join(',')+")"
+    var transitionCSS = "all "+durationTime+"s cubic-bezier("+bezierCurveArray[indexnum-2].join(',')+")"
     $(this).parent().find('.easing_ball').css("transition",transitionCSS)
 
     //小球开关
@@ -194,7 +194,7 @@ $('.animation-box').each(function(){
         y: size + offset
       }, {
         y: offset,
-        ease: easeArray[indexnum],
+        ease: easeArray[indexnum-2],
         onUpdate: updateGraph
       });
     }

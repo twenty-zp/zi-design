@@ -149,7 +149,7 @@ xPage title
 main > h1 {
   color: #464d5c;
 }
-@media only screen and (min-width: 1724px) {
+@media only screen and (min-width: 1600px) {
   main > h1 {
     /* title goes into the header on big devices */
     color: #464d5c;
@@ -715,7 +715,7 @@ header nav {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-@media only screen and (min-width: 1724px) {
+@media only screen and (min-width: 1600px) {
   .cd-logo {
     margin-left: 3%;
   }
@@ -843,7 +843,7 @@ header nav {
     border-top: none;
   }
 }
-@media only screen and (min-width: 1724px) {
+@media only screen and (min-width: 1600px) {
   .cd-main-nav {
     display: none;
   }
@@ -886,7 +886,7 @@ main > h1 {
     padding-top: 80px;
   }
 }
-@media only screen and (min-width: 1724px) {
+@media only screen and (min-width: 1600px) {
   main {
     max-width: none;
     padding: 120px 0 50px;
@@ -944,7 +944,7 @@ section:nth-of-type(9) h2::before {
     margin: 3em 0 5em;
   }
 }
-@media only screen and (min-width: 1724px) {
+@media only screen and (min-width: 1600px) {
   section {
     width: 60%;
     /*float: left;*/
@@ -1354,6 +1354,7 @@ section:nth-of-type(9) h2::before {
 
 #icons .cd-box {
   height: auto;
+  text-align: center;
 }
 
 .cd-icons li {
@@ -1563,10 +1564,28 @@ section:nth-of-type(9) h2::before {
   height: auto;
 }
 
-#animation .cd-box:nth-of-type(2) {
-  margin-top: -1px;
+#animation .cd-box:nth-of-type(2n) {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  height: auto;
+  float: left;
+  /*width: 49%;
+  margin: 1.25em 2% 0em 0;*/
   padding: 0;
-  overflow: hidden;
+}
+
+#animation .cd-box:nth-of-type(3),#animation .cd-box:nth-of-type(5) {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  height: auto;
+  float: left;
+  /*width: 49%;
+  margin: 1.25em 0% 0em 0;*/
+  padding: 0;
 }
 
 .quote {
@@ -1598,11 +1617,11 @@ section:nth-of-type(9) h2::before {
 }
 
 .animation-box{
-  width: 50%;
+  width: 100%;
   float: left;
   display: inline-block;
   height: 510px;
-  box-shadow: 1px 1px 0px 0px #D0D3D9;
+  /*box-shadow: 1px 1px 0px 0px #D0D3D9;*/
 }
 
 
@@ -1635,7 +1654,7 @@ section:nth-of-type(9) h2::before {
 }
 
 .easing_ball_moving{
-  bottom:178px;
+  bottom:156px;
 }
 
 .animation_container {
@@ -1645,8 +1664,8 @@ section:nth-of-type(9) h2::before {
 
 .graph_container{
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   border: 1px solid #d0d3d9;
   margin: 50px auto;
   float: left;
@@ -1654,8 +1673,8 @@ section:nth-of-type(9) h2::before {
 
 .ball_container{
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   border: 1px solid #d0d3d9;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -1673,8 +1692,8 @@ section:nth-of-type(9) h2::before {
 
 .graph_beziercurve_container {
   position: absolute;
-  width: 199px;
-  bottom: -100px;
+  width: 174px;
+  bottom: -125px;
   height: 400px;
   pointer-events: none;
   z-index: 5;
@@ -1693,7 +1712,23 @@ section:nth-of-type(9) h2::before {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (min-width: 768px) {
+  #animation .cd-box:nth-of-type(2n) {
+
+    width: 49%;
+    margin: 1.25em 2% 0em 0;
+
+  }
+
+  #animation .cd-box:nth-of-type(3),#animation .cd-box:nth-of-type(5) {
+
+    width: 49%;
+    margin: 1.25em 0% 0em 0;
+
+  }
+}
+
+@media only screen and (max-width: 1024px) {
   .animation-box {
     height: auto;
   }
@@ -1708,6 +1743,12 @@ section:nth-of-type(9) h2::before {
 }
 
 @media only screen and (max-width: 768px) {
+
+  #animation .cd-box {
+    width: 100%;
+    margin:1.25em 0 0 0;
+  }
+
   .animation-box {
     height: auto;
     width: 100%;
