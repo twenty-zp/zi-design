@@ -49,7 +49,7 @@ jQuery(document).ready(function($){
 			spanElement.appendTo(wrapperElement);
 			wrapperElement.appendTo(containerHtml);
 			wrapperElement.append('"' + block2[1]);
-			wrapperElement.append('&lt;button&gt;');
+			wrapperElement.append('&lt;/button&gt;');
 		}
 
 

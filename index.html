@@ -231,14 +231,105 @@
 		<section id="animation" class="cd-animation">
 			<h2>动画</h2>
 			<div class="cd-box">
-				<span class="quote">"There isn’t one easing curve that works for absolutely everything. Crafting easing curves is a key component of designing motion."</span>
-				<span class="animation_text" style="line-height: 1.8em;">动画设计相对更依赖感觉，字里行间的 Web 动画本质上追求一种明快清爽的运动感，而曲线使用又有所收敛,动画时间不宜超过 500ms。<br>主要使用的曲线有 4 种:</span>
-				<span>
-					<span class="easing_label">linear</span> ,
-					<span class="easing_label">ease</span> ,
-					<span class="easing_label">ease-in-out</span> ,
-					<span class="easing_label">easeOutQuint</span>
-				</span>
+					<span class="quote">"There isn’t one easing curve that works for absolutely everything. Crafting easing curves is a key component of designing motion."</span>
+					<span class="animation_text">
+						动画设计相对更依赖感觉，字里行间的 Web 动画本质上追求一种明快清爽的运动感，而曲线使用又有所收敛,动画时间不宜超过 500ms。<br>主要使用的曲线有 4 种:
+						<span>
+							<span class="easing_label">linear</span> ,
+							<span class="easing_label">ease</span> ,
+							<span class="easing_label">easeInOut</span> ,
+							<span class="easing_label">easeOutQuint</span>,
+							<span class="easing_label">easeModal</span>,
+						</span>
+					</span>
+
+			</div>
+			<div class="cd-box">
+				<div class="animation-box">
+					<span class="easing_name">linear</span><span class="easing_bezier">cubic-bezier(0.0, 0.0, 1.0, 1.0)</span>
+					<span class="animation_text">适用于循环动画，以及体积微小元素、短时间（200ms 以内）内的动画。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+
+				<div class="animation-box">
+					<span class="easing_name">ease</span><span class="easing_bezier">cubic-bezier(0.25, 0.1, 0.25, 1.0)</span>
+					<span class="animation_text">适用于透明度动画，时间控制在 300ms 以内，并且效果不突兀。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+
+				<div class="animation-box">
+					<span class="easing_name">easeInout</span><span class="easing_bezier">cubic-bezier(0.42, 0.0, 0.58, 1.0)</span>
+					<span class="animation_text">适用于 Hover 动画，时间控制在 300ms 以内，并且效果不突兀。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+
+				<div class="animation-box">
+					<span class="easing_name">easeOutQuint</span><span class="easing_bezier">cubic-bezier(0.23, 1, 0.32, 1)</span>
+					<span class="animation_text">运动感明快清爽，具有品牌感，时间最好在 500ms 以上，否则过快</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+
+				<div class="animation-box">
+					<span class="easing_name">easeModal</span><span class="easing_bezier">cubic-bezier(0.165,0.84,0.44,1)</span>
+					<span class="animation_text">适用于模态弹窗，时间为 300ms，所有弹窗效果都应采用此曲线。</span>
+					<div class="animation_container">
+						<div class="graph_container">
+							<svg class="graph_beziercurve_container">
+								<polyline class="graph_bezierline"></polyline>
+							</svg>
+						</div>
+						<div class="ball_container">
+								<div class="easing_ball"></div>
+						</div>
+					</div>
+					<button class="play_animation btn btn-article-preview">播放</button>
+				</div>
+
+				<div class="animation-box">
+				</div>
+				<!-- <div class="animation-box animation-box-2">
+
+				</div> -->
 			</div>
 		</section>
 
@@ -249,6 +340,9 @@
 		</section>
 	</main>
 <script src="js/jquery-2.1.1.js"></script>
+<script src='js/TweenMax.min.js'></script>
+<script src='js/DrawSVGPlugin.min.js'></script>
+<script src="js/EaseGetRatio.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

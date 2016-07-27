@@ -152,7 +152,7 @@ main > h1 {
 @media only screen and (min-width: 1600px) {
   main > h1 {
     /* title goes into the header on big devices */
-    color: #ffffff;
+    color: #464d5c;
   }
 }
 
@@ -530,7 +530,7 @@ form fieldset:nth-of-type(2){
 
 .alert:before {
   font-size: 16px;
-  right: -256px;
+  right: -240px;
   position: relative;
   color: #F2555B;
   -webkit-transition: border-color .3s ease-in-out;
@@ -559,7 +559,7 @@ form fieldset:nth-of-type(2){
 
 .success::before{
   font-size: 16px;
-  right: -256px;
+  right: -240px;
   position: relative;
   color: #45CE5E;
   -webkit-transition: border-color .3s ease-in-out;
@@ -1088,19 +1088,23 @@ section:nth-of-type(8) h2::before {
 .cd-icons .cd-box,
 .cd-form .cd-box,
 .cd-component .cd-box,
-.cd-animation .cd-box {
-  padding: 1em;
+.cd-animation .cd-box,
+.cd-component .cd-box,
+.animation-box {
+  padding: 2em;
 }
-/*@media only screen and (min-width: 768px) {
-  .cd-typography .cd-box .cd-box,
-  .cd-buttons .cd-box .cd-box,
-  .cd-icons .cd-box .cd-box,
+@media only screen and (max-width: 768px) {
+  .cd-typography .cd-box,
+  .cd-buttons .cd-box,
+  .cd-icons .cd-box,
   .cd-form .cd-box,
   .cd-component .cd-box,
-  .cd-animation .cd-box {
-    padding: 2em;
+  .cd-animation .cd-box,
+  .cd-component .cd-box,
+  .animation-box  {
+    padding: 1em;
   }
-}*/
+}
 
 /* xTypography section - basic style */
 
@@ -1533,6 +1537,7 @@ section:nth-of-type(8) h2::before {
 .cd-form input[type=text],
 .cd-form .cd-input-wrapper {
   margin: 1em;
+  margin-left: 0;
 }
 .cd-form .cd-input-wrapper {
   position: relative;
@@ -1544,6 +1549,17 @@ section:nth-of-type(8) h2::before {
 }
 
 /* xAnimation section - basic style */
+
+#animation .cd-box {
+  height: auto;
+}
+
+#animation .cd-box:nth-of-type(2) {
+  margin-top: -1px;
+  padding: 0;
+  overflow: hidden;
+}
+
 .quote {
   font-family: 'Montserrat-Light';
   font-size: 24px;
@@ -1566,6 +1582,110 @@ section:nth-of-type(8) h2::before {
 
 .animation_text{
   color:#6d7075;
+  line-height: 1.8em;
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.animation-box{
+  width: 50%;
+  float: left;
+  display: inline-block;
+  height: 520px;
+  box-shadow: 1px 1px 0px 0px #D0D3D9;
+}
+
+.animation-box-2{
+  width: 65%
+}
+
+.easing_name {
+  display: -webkit-inline-box;
+  position: relative;
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 3px 7px 3px 7px;
+  border-radius: 3px;
+  color: #464d5c;
+}
+
+.easing_bezier {
+  font-size: 16px;
+  font-family: 'Montserrat-Regular',sans-serif;
+  color: #3a7bf7;
+  margin-left: 6px;
+
+}
+
+.easing_ball {
+  background-color: #3a7bf7;
+  height: 10%;
+  width: 10%;
+  border-radius: 100px;
+  bottom: 0px;
+  position: absolute;
+  left: 45%;
+}
+
+.easing_ball_moving{
+  bottom:178px;
+}
+
+.animation_container {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.graph_container{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #d0d3d9;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  float: left;
+}
+
+.ball_container{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #d0d3d9;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  float: right;
+}
+
+.graph_bar {
+  position:absolute;
+  width:1px;
+  height:200px;
+  bottom:0;
+  left:0;
+  background:#f6f6f6;
+}
+
+.graph_beziercurve_container {
+  position: absolute;
+  width: 199px;
+  bottom: -100px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.graph_bezierline {
+  fill: none;
+  stroke: #3a7bf7;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.play_animation {
+  position: relative;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -1574,33 +1694,33 @@ section:nth-of-type(8) h2::before {
 
 @font-face {
     font-family: 'Montserrat-Light';
-    src: url("../Font/Montserrat/Montserrat-Light.ttf");
+    src: url("../assets/font/Montserrat-Light.ttf");
 }
 @font-face {
     font-family: 'Montserrat-Regular';
-    src: url("../Font/Montserrat/Montserrat-Regular.ttf");
+    src: url("../assets/font/Montserrat-Regular.ttf");
 }
 @font-face {
     font-family: 'FZYanSong-Light';
-    src: url("../Font/FZYanSong/FZYanSJW_Xian.ttf");
+    src: url("../assets/font/FZYanSJW_Xian.ttf");
 }
 @font-face {
     font-family: 'FZYanSong-Regular';
-    src: url("../Font/FZYanSong/FZYanSJW_Zhun.ttf");
+    src: url("../assets/font/FZYanSJW_Zhun.ttf");
 }
 @font-face {
     font-family: 'HYQiHei-25';
-    src: url("../Font/HYQiHei/HYQiHei-25S.ttf");
+    src: url("../assets/font/HYQiHei-25S.ttf");
 }
 @font-face {
     font-family: 'HYQiHei-55';
-    src: url("../Font/HYQiHei/HYQiHei-55S.ttf");
+    src: url("../assets/font/HYQiHei-55S.ttf");
 }
 @font-face {
     font-family: 'HYQiHei-60';
-    src: url("../Font/HYQiHei/HYQiHei-60S.ttf");
+    src: url("../assets/font/HYQiHei-60S.ttf");
 }
 @font-face {
     font-family: 'HYQiHei-75';
-    src: url("../Font/HYQiHei/HYQiHei-75S.ttf");
+    src: url("../assets/font/HYQiHei-75S.ttf");
 }
