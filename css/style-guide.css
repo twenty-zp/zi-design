@@ -1569,7 +1569,7 @@ section:nth-of-type(8) h2::before {
   line-height: 32px;
   display: block;
   margin-top: 10px;
-  color: #3a7bf7;
+  color: #a0a2a5;
   margin-bottom: 26px;
 }
 
@@ -1701,7 +1701,7 @@ section:nth-of-type(8) h2::before {
 @media only screen and (max-width: 768px) {
   .animation-box {
     height: auto;
-    width: 50%;
+    width: 100%;
   }
 
   .graph_container {
