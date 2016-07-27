@@ -1016,7 +1016,7 @@ section:nth-of-type(9) h2::before {
 }
 
 .cd-colors b {
-  color: #464d5c;
+  color: #3a7bf7;
   display: block;
   padding: .6em 0;
   text-transform: uppercase;
@@ -1767,18 +1767,92 @@ section:nth-of-type(9) h2::before {
 
 /* xComponent section - basic style */
 
-#component .cd-box {
+#component .cd-box{
+
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  height: auto;
+  float: left;
+  overflow: hidden;
+  padding: 2em;
+}
+
+#component .cd-box:nth-of-type(2n+1) {
+  width: 49%;
+  margin: 1.25em 2% 0em 0;
+}
+
+#component .cd-box:nth-of-type(2n) {
+  width: 49%;
+  margin: 1.25em 0 0em 0;
+}
+
+#component .cd-box:nth-of-type(1),#component .cd-box:nth-of-type(2) {
+  margin-top: 0;
+}
+
+.effect-box {
+  display: block;
+  width: 100%;
+  padding-top: 69.5%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border:1px solid #D0D3D9;
+}
+
+.component-title {
+  padding: 2em 0 0 2px;
+  position: relative;
+  display: block;
+  font-family: 'Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  color: #6d7075;
+}
+
+#component2 .cd-box {
   height: auto;
   padding: 0;
   overflow: hidden;
 }
 
-.component-box {
+#component2 .component-title {
+  padding: 6em 0 6em 0;
+  text-align: center;
+}
+
+#component2 .component-box {
   width: 50%;
   float: left;
   display: inline-block;
-  height: 510px;
+  height: auto;
   box-shadow: 1px 1px 0px 0px #D0D3D9;
+}
+#component2 .cd-box:nth-of-type(2){
+  height: 300px;
+  margin-top: -1px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  #component .cd-box{
+    padding: 1em;
+  }
+
+  #component .cd-box:nth-of-type(2n+1) {
+    width: 100%;
+    margin: 1.25em 0 0em 0;
+  }
+
+  #component .cd-box:nth-of-type(2n) {
+    width: 100%;
+    margin: 1.25em 0 0em 0;
+  }
+
+  .component-title {
+    padding: 1em 0 0 2px;
+  }
 }
 
 /* xIllustration section - basic style */
@@ -1794,33 +1868,27 @@ section:nth-of-type(9) h2::before {
   padding: 2em;
 }
 
-
-
-@media only screen and (min-width: 768px) {
-  #illustration .image-box:nth-of-type(2n+1) {
-    margin: 1.25em 0% 0em 0;
-  }
-
-  #illustration .image-box:nth-of-type(2n){
-    margin: 1.25em 2% 0em 0;
-  }
-
-  #illustration .image-box span{
-    padding: 2em 0 0 2px;
-  }
-
-
-  #illustration .cd-box:nth-of-type(1) {
-    padding: 2em;
-  }
-
-  #illustration .cd-box:nth-of-type(1) .illustration-image {
-    width: 50%;
-    padding-top: 24.8%;
-  }
-
+#illustration .image-box:nth-of-type(2n+1) {
+  margin: 1.25em 0% 0em 0;
 }
 
+#illustration .image-box:nth-of-type(2n){
+  margin: 1.25em 2% 0em 0;
+}
+
+#illustration .image-box span{
+  padding: 2em 0 0 2px;
+}
+
+
+#illustration .cd-box:nth-of-type(1) {
+  padding: 2em;
+}
+
+#illustration .cd-box:nth-of-type(1) .illustration-image {
+  width: 50%;
+  padding-top: 24.8%;
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -1856,7 +1924,7 @@ section:nth-of-type(9) h2::before {
   height: auto;
 }
 
-.cd-box:nth-of-type(1) .illustration-image {
+#illustration .cd-box:nth-of-type(1) .illustration-image {
   background-image: url("../assets/illustration/ui-stack.jpg");
   margin: 0 auto;
   position: relative;
@@ -1864,7 +1932,7 @@ section:nth-of-type(9) h2::before {
   background-size: contain;
 }
 
-.cd-box:nth-of-type(1) span:nth-of-type(1) {
+#illustration .cd-box:nth-of-type(1) span:nth-of-type(1) {
   font-size: 14px;
   text-align: center;
   display: block;
@@ -1874,7 +1942,7 @@ section:nth-of-type(9) h2::before {
   font-family: 'Montserrat-Light',sans-serif;
 }
 
-.cd-box:nth-of-type(1) span:nth-of-type(2) {
+#illustration .cd-box:nth-of-type(1) span:nth-of-type(2) {
   font-size: 1.6rem;
   color: #6d7075;
   line-height: 1.8em;
@@ -1900,8 +1968,7 @@ section:nth-of-type(9) h2::before {
   position: relative;
   display: block;
   font-family: 'Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-  color: #464D5C;
-  font-weight: 600;
+  color: #6d7075;
 }
 
 /*Web Font Area*/
