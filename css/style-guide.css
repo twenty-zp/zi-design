@@ -149,7 +149,7 @@ xPage title
 main > h1 {
   color: #464d5c;
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1724px) {
   main > h1 {
     /* title goes into the header on big devices */
     color: #464d5c;
@@ -715,7 +715,7 @@ header nav {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1724px) {
   .cd-logo {
     margin-left: 3%;
   }
@@ -843,7 +843,7 @@ header nav {
     border-top: none;
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1724px) {
   .cd-main-nav {
     display: none;
   }
@@ -886,7 +886,7 @@ main > h1 {
     padding-top: 80px;
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1724px) {
   main {
     max-width: none;
     padding: 120px 0 50px;
@@ -941,7 +941,7 @@ section:nth-of-type(8) h2::before {
     margin: 3em 0 5em;
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1724px) {
   section {
     width: 60%;
     /*float: left;*/
@@ -1592,13 +1592,10 @@ section:nth-of-type(8) h2::before {
   width: 50%;
   float: left;
   display: inline-block;
-  height: 520px;
+  height: 510px;
   box-shadow: 1px 1px 0px 0px #D0D3D9;
 }
 
-.animation-box-2{
-  width: 65%
-}
 
 .easing_name {
   display: -webkit-inline-box;
@@ -1642,8 +1639,7 @@ section:nth-of-type(8) h2::before {
   width: 200px;
   height: 200px;
   border: 1px solid #d0d3d9;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto;
   float: left;
 }
 
@@ -1686,6 +1682,37 @@ section:nth-of-type(8) h2::before {
   position: relative;
   display: block;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1040px) {
+  .animation-box {
+    height: auto;
+  }
+  .graph_container {
+    margin: 2em auto;
+    float:none;
+  }
+  .ball_container {
+    margin: 2em auto;
+    float:none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .animation-box {
+    height: auto;
+    width: 50%;
+  }
+
+  .graph_container {
+    margin: 2em auto;
+    float:none;
+  }
+  .ball_container {
+    margin: 2em auto;
+    float:none;;
+    display: none;
+  }
 }
 
 
