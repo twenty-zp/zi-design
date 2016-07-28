@@ -40,13 +40,13 @@
 				<div class="modal-bottom">
 					<div class="modal-content">要将「明朝散发弄扁舟」该篇文章删除吗，删除后原文章链接将无法访问。</div>
 					<div class="modal-bottom-btn">
-						<button class="btn btn-delete modal-btn-layout" id="close-modal3">确定</button>
 						<button class="btn btn-cancel modal-btn-layout" id="close-modal4">取消</button>
+						<button class="btn btn-delete modal-btn-layout" id="close-modal3">删除</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h1 class="guide_title">Web <span>样式指南</span> 0.8</h1>
+		<h1 class="guide_title">Web <span>样式指南</span> 1.0</h1>
 
 		<section id="branding" class="cd-branding">
 			<h2>品牌</h2>
@@ -196,6 +196,8 @@
 				<li class="icon-Draft"></li>
 				<li class="icon-Publish"></li>
 				<li class="icon-SmashnEmpty"></li>
+				<li class="icon-Edit"></li>
+				<li class="icon-Delete"></li>
 				<li class="icon-Share2"></li>
 				<li class="icon-WhiteNoise"></li>
 				<li class="icon-iMac"></li>
@@ -223,6 +225,8 @@
 				<li class="icon-Num"></li>
 				<li class="icon-Divide"></li>
 				<li class="icon-AddPicture"></li>
+				<li class="icon-Backward"></li>
+				<li class="icon-Forward"></li>
 			</ul>
 		</section>
 
@@ -382,40 +386,119 @@
 				<p>&ltdiv class="<span style="color: #3a7bf7;">modal-bg</span>" id="<span style="color: #3a7bf7;">close-modal1</span>"&gt...&lt/div&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<a href="#0" class="dropdown-btn" id="dropdown-onClick"><span class="dropdown-title">我的文章</span><span class="dropdown-arrow"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#0" class="dropdown-name dropdown-selected">我的文章</a><span class="li-arrow"></span></li>
+							<li><a href="#0" class="dropdown-name">已发布</a><span class="li-arrow"></span></li>
+							<li><a href="#0" class="dropdown-name">草稿箱</a><span class="li-arrow"></span></li>
+							<li><a href="#0" class="dropdown-name">废纸篓</a><span class="li-arrow"></span></li>
+						</ul>
+					</div>
+				</div>
 				<span class="component-title">下拉菜单</span>
+				<p>&lta class="<span style="color: #3a7bf7;">dropdown-btn</span>" id="<span style="color: #3a7bf7;">dropdown-onClick</span>"&gt...&lt/a&gt</p>
+				<p>&ltul class="<span style="color: #3a7bf7;">dropdown-menu</span>"&gt...&lt/ul&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<a href="#0" class="dropdown-btn" id="dropdown-onClick2"><span class="dropdown-title">发布文章</span><span class="dropdown-arrow"></span></a>
+						<ul class="dropdown-menu2">
+							<li><span class="icon-Publish icon">发布文章</span></li>
+							<li><span class="icon-Draft icon">存为草稿</span></li>
+							<li class="dropdown-seperator"></li>
+							<li><span class="icon-Delete icon">删除文章</span></li>
+							<span class="dropdown-uparrow"></span>
+						</ul>
+					</div>
+				</div>
 				<span class="component-title">下拉菜单(箭头)</span>
+				<p>&lta class="<span style="color: #3a7bf7;">dropdown-btn</span>" id="<span style="color: #3a7bf7;">dropdown-onClick2</span>"&gt...&lt/a&gt</p>
+				<p>&ltul class="<span style="color: #3a7bf7;">dropdown-menu2</span>"&gt...&lt/ul&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="loading-container">
+	            <div class="loading">
+	              <div class="loading-circle"></div>
+	              <div class="loading-bar"></div>
+	            </div>
+	          </div>
+					</div>
+				</div>
 				<span class="component-title">读取进度条</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">loading-container</span>"&gt...&lt/div&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<ul class="slider">
+							<li class="slider-switch"><span class="icon-Wechat"></span><span class="text-weixin">微信分享</span></li>
+							<li class=""><span class="icon-Weibo"></span><span class="text-weixin">微博分享</span></li>
+							<li class=""><span class="icon-Copy"></span><span class="text-link">链接分享</span></li>
+							<div class="slider-bar"></div>
+						</ul>
+					</div>
+				</div>
 				<span class="component-title">滑块选择</span>
+				<p>&ltul class=""<span style="color: #3a7bf7;">slider</span>"&gt<br>&nbsp&nbsp...<br>&nbsp&nbsp&ltdiv class=""<span style="color: #3a7bf7;">slider-bar</span>"&gt&lt/div&gt<br>&lt/ul&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="hover-tips">编辑</div>
+						<a class="hover-icon icon-Edit"></a>
+					</div>
+				</div>
 				<span class="component-title">提示弹层(Hover)</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">hover-tips</span>"&gt编辑&lt/div&gt</p>
+				<p>&lta class="<span style="color: #3a7bf7;">hover-icon icon-Edit</span>"&gt&lt/a&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="auto-tips">请添加头像</div>
+						<button class="btn-tips btn btn-blue">触发</button>
+					</div>
+				</div>
 				<span class="component-title">提示弹层(Auto)</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">auto-tips</span>"&gt请添加头像&lt/div&gt</p>
+				<p>&ltbutton class="<span style="color: #3a7bf7;">btn-tips btn btn-blue</span>"&gt触发&lt/button&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="big-avatar"></div>
+						<div class="small-avatar"></div>
+					</div>
+				</div>
 				<span class="component-title">头像</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">big-avatar</span>"&gt&lt/div&gt</p>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">small-avatar</span>"&gt&lt/div&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<span class="backward-btn"><span class="icon-Backward"></span><span class="wards-text">返回创作中心</span></span>
+						<span class="forward-btn"><span class="wards-text">使用默认模板</span><span class="icon-Forward"></span></span>
+					</div>
+				</div>
 				<span class="component-title">前进 | 后退</span>
+				<p class="wards-p">&ltspan class="<span style="color: #3a7bf7;">backward-btn</span>"&gt&ltspan class="<span style="color: #3a7bf7;">icon-Backward</span>"&gt&lt/span&gt&ltspan class="<span style="color: #3a7bf7;">wards-text</span>"&gt返回创作中心&lt/span&gt&lt/span&gt</p>
+				<p class="wards-p">&ltspan class="<span style="color: #3a7bf7;">forward-btn</span>"&gt&ltspan class="<span style="color: #3a7bf7;">wards-text</span>"&gt使用默认模板&lt/span&gt&ltspan class="<span style="color: #3a7bf7;">icon-Forward</span>"&gt&lt/span&gt&lt/span&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box">
+						<div class="hud-tips">请输入标题</div>
+						<button class="btn-hud btn btn-blue">触发</button>
+					</div>
+				</div>
 				<span class="component-title">编辑提示</span>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">hud-tips</span>"&gt请输入标题&lt/div&gt</p>
 			</div>
 		</section>
 
@@ -443,28 +526,6 @@
 				<span>分享激励</span>
 			</div>
 		</section>
-
-		<!-- <section id="component2" class="cd-component">
-			<h2>组件</h2>
-
-			<div class="cd-box">
-				<div class="component-box"><span class="component-title">文本链接</span></div>
-				<div class="component-box"><span class="component-title">模态弹窗</span></div>
-				<div class="component-box"><span class="component-title">下拉菜单</span></div>
-				<div class="component-box"><span class="component-title">下拉菜单(箭头)</span></div>
-				<div class="component-box"><span class="component-title">读取进度条</span></div>
-				<div class="component-box"><span class="component-title">滑块选择</span></div>
-				<div class="component-box"><span class="component-title">提示弹层(Hover)</span></div>
-				<div class="component-box"><span class="component-title">提示弹层(Auto)</span></div>
-				<div class="component-box"><span class="component-title">前进 | 后退</span></div>
-				<div class="component-box"><span class="component-title">头像</span></div>
-				<div class="component-box"><span class="component-title">编辑提示</span></div>
-			</div>
-			<div class="cd-box">
-
-			</div>
-
-		</section> -->
 
 	</main>
 <script src="js/jquery-2.1.1.js"></script>
