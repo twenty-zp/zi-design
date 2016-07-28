@@ -31,6 +31,21 @@
 	</header>
 
 	<main>
+		<div class="modal-bg" id="close-modal1">
+			<div class="modal-container">
+				<div class="modal-head">
+					<div class="modal-title">你确定要这么做吗？</div>
+					<div class="modal-close" id="close-modal2"></div>
+				</div>
+				<div class="modal-bottom">
+					<div class="modal-content">要将「明朝散发弄扁舟」该篇文章删除吗，删除后原文章链接将无法访问。</div>
+					<div class="modal-bottom-btn">
+						<button class="btn btn-delete modal-btn-layout" id="close-modal3">确定</button>
+						<button class="btn btn-cancel modal-btn-layout" id="close-modal4">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<h1 class="guide_title">Web <span>样式指南</span> 0.8</h1>
 
 		<section id="branding" class="cd-branding">
@@ -346,10 +361,10 @@
 			<h2>组件</h2>
 			<div class="cd-box">
 				<div class="effect-box">
-				<a href="#0" class="blue-underline-link">听听我们工程师的想法</a>
-				<a href="#0" class="ink-link">下载应用</a>
-				<a href="#0" class="grey-link">关于我们</a>
-				<a href="#0" class="blue-link">隐私条款</a>
+					<div class="aligin-box"><a href="#0" class="blue-underline-link">听听我们工程师的想法</a></div>
+					<div class="aligin-box"><a href="#0" class="ink-link">下载应用</a></div>
+					<div class="aligin-box"><a href="#0" class="grey-link">关于我们</a></div>
+					<div class="aligin-box"><a href="#0" class="blue-link">隐私条款</a></div>
 				</div>
 				<span class="component-title">文本链接</span>
 				<p>&lta class="<span style="color: #3a7bf7;">blue-underline-link</span>"&gt听听我们工程师的想法&lt/a&gt</p>
@@ -358,8 +373,13 @@
 				<p>&lta class="<span style="color: #3a7bf7;">blue-link</span>"&gt隐私条款&lt/a&gt</p>
 			</div>
 			<div class="cd-box">
-				<div class="effect-box"></div>
+				<div class="effect-box">
+					<div class="aligin-box"><button class="btn btn-login" id="active_modal">激活</button></div>
+				</div>
+
 				<span class="component-title">模态弹窗</span>
+				<p>&ltbutton class="<span style="color: #3a7bf7;">btn btn-login</span>" id="<span style="color: #3a7bf7;">active_modal</span>"&gt激活&lt/button&gt</p>
+				<p>&ltdiv class="<span style="color: #3a7bf7;">modal-bg</span>" id="<span style="color: #3a7bf7;">close-modal1</span>"&gt...&lt/div&gt</p>
 			</div>
 			<div class="cd-box">
 				<div class="effect-box"></div>

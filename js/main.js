@@ -118,3 +118,22 @@ jQuery(document).ready(function($){
 		});
 	}
 });
+
+/*******************
+	component
+********************/
+
+var $active_modal = $("#active_modal")
+
+$active_modal.on("click",function(){
+	$('.modal-bg').addClass("modal-is-visible")
+	$('body').css("overflow","hidden")
+})
+
+$('#close-modal1').on('click', function(event){
+	if( $(event.target).is('#close-modal2, #close-modal3 , #close-modal4') || $(event.target).is('#close-modal1')){
+		$('.modal-bg').removeClass('modal-is-visible');
+		$('body').css("overflow","")
+		return false;
+	}
+});
