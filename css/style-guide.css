@@ -243,7 +243,7 @@ xButtons
   float: left;
   display: inline-block;
   height: 198px;
-  box-shadow: 1px 1px 0px 0px #D0D3D9;
+  box-shadow: 1px 1px 0px 0px #e6e6e6;
 }
 
 #buttons .cd-box .btn-box:nth-of-type(7) {
@@ -1666,7 +1666,7 @@ section:nth-of-type(9) h2::before {
   position: relative;
   width: 175px;
   height: 175px;
-  border: 1px solid #d0d3d9;
+  border: 1px solid #e6e6e6;
   margin: 50px auto;
   float: left;
 }
@@ -1675,7 +1675,7 @@ section:nth-of-type(9) h2::before {
   position: relative;
   width: 175px;
   height: 175px;
-  border: 1px solid #d0d3d9;
+  border: 1px solid #e6e6e6;
   margin-top: 50px;
   margin-bottom: 50px;
   float: right;
@@ -1796,22 +1796,120 @@ section:nth-of-type(9) h2::before {
 .effect-box {
   display: block;
   width: 100%;
-  padding-top: 69.5%;
+  height: 300px;
   position: relative;
   background-repeat: no-repeat;
   background-size: contain;
-  border:1px solid #D0D3D9;
+  border:1px solid #e6e6e6;
 }
 
 .component-title {
-  padding: 2em 0 0 2px;
+  display: -webkit-inline-box;
   position: relative;
-  display: block;
+  text-align: center;
+  background-color: #f6f6f6;
   font-family: 'Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-  color: #6d7075;
+  padding: 3px 7px 3px 7px;
+  border-radius: 3px;
+  color: #464d5c;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: 600;
 }
 
-#component2 .cd-box {
+.blue-underline-link {
+  display: inline-block;
+  color: #3a7bf7;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'HYQiHei-60','Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.blue-underline-link:after {
+  content: '';
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  bottom: -3px;
+  width: 160px;
+  height: 1px;
+  background-color: #3a7bf7;
+  opacity: 1;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.blue-underline-link:hover{
+  opacity: 0.8;
+}
+
+.blue-underline-link:after:hover {
+  opacity: 0.8
+}
+
+.ink-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #7B8494;
+  font-family: 'HYQiHei-60','Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  cursor: pointer;
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.ink-link:hover {
+  color: #464D5C;
+}
+
+.grey-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #A0A2A5;
+  font-family: 'HYQiHei-60','Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  cursor: pointer;
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.grey-link:hover {
+  opacity: 0.8;
+}
+
+.blue-link {
+  display: inline-block;
+  color: #3a7bf7;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'HYQiHei-60','Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.blue-link:hover {
+  opacity: 0.8;
+}
+
+#component .cd-box:nth-of-type(1) .effect-box a {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+
+/* ########## component2 ###########*/
+/*#component2 .cd-box {
   height: auto;
   padding: 0;
   overflow: hidden;
@@ -1832,7 +1930,7 @@ section:nth-of-type(9) h2::before {
 #component2 .cd-box:nth-of-type(2){
   height: 300px;
   margin-top: -1px;
-}
+}*/
 
 @media only screen and (max-width: 768px) {
 
@@ -1851,7 +1949,8 @@ section:nth-of-type(9) h2::before {
   }
 
   .component-title {
-    padding: 1em 0 0 2px;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }
 
@@ -1877,7 +1976,16 @@ section:nth-of-type(9) h2::before {
 }
 
 #illustration .image-box span{
-  padding: 2em 0 0 2px;
+  display: -webkit-inline-box;
+  position: relative;
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 3px 7px 3px 7px;
+  font-family: 'Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  border-radius: 3px;
+  color: #464d5c;
+  margin-top: 2em;
+  font-weight: 600;
 }
 
 
@@ -1899,7 +2007,7 @@ section:nth-of-type(9) h2::before {
   }
 
   #illustration .image-box span{
-    padding: 1em 0 0 2px;
+    margin-top: 1em;
   }
 
   #illustration .cd-box:nth-of-type(1) {
