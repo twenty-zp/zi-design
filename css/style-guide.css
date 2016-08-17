@@ -453,6 +453,14 @@ xButtons
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  #buttons .cd-box .btn-box:nth-of-type(8),#buttons .cd-box .btn-box:nth-of-type(9) {
+    display: none;
+  }
+}
+
+
+
 .cd-buttons .cd-box:nth-of-type(2) span {
   /* CSS class name color */
   color: #3a7bf7;
