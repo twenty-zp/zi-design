@@ -151,12 +151,13 @@ xPage title
 main > h1 {
   color: #464d5c;
 }
-@media only screen and (min-width: 1600px) {
+
+/*@media only screen and (min-width: 1600px) {
   main > h1 {
-    /* title goes into the header on big devices */
+
     color: #464d5c;
   }
-}
+}*/
 
 /* --------------------------------
 
@@ -217,10 +218,6 @@ p a {
     font-size: 1.6rem;
     line-height: 1.6;
   }
-}
-
-.font_area span {
-  font-family: 'Montserrat-Light',sans-serif;
 }
 
 /* --------------------------------
@@ -725,11 +722,11 @@ header nav {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-@media only screen and (min-width: 1600px) {
+/*@media only screen and (min-width: 1600px) {
   .cd-logo {
     margin-left: 3%;
   }
-}
+}*/
 
 .cd-nav-trigger {
   display: block;
@@ -853,11 +850,10 @@ header nav {
     border-top: none;
   }
 }
-@media only screen and (min-width: 1600px) {
+/*@media only screen and (min-width: 1600px) {
   .cd-main-nav {
-    /*display: none;*/
   }
-}
+}*/
 
 .nav-is-visible .cd-nav-trigger span::before {
   -webkit-transform: translateY(0) rotate(-45deg);
@@ -896,7 +892,7 @@ main > h1 {
     padding-top: 80px;
   }
 }
-@media only screen and (min-width: 1600px) {
+/*@media only screen and (min-width: 1600px) {
   main {
     max-width: none;
     padding: 120px 0 50px;
@@ -912,7 +908,7 @@ main > h1 {
     font-size: 2.6rem;
     z-index: 20;
   }
-}
+}*/
 
 section {
   margin: 3em 0;
@@ -954,17 +950,12 @@ section:nth-of-type(9) h2::before {
     margin: 3em 0 5em;
   }
 }
-@media only screen and (min-width: 1600px) {
+/*@media only screen and (min-width: 1600px) {
   section {
     width: 60%;
-    /*float: left;*/
     margin: 0 auto;
-    /*margin: 0 4% 4em 0;*/
   }
-  /*section:nth-of-type(2n) {
-    margin-right: 0;
-  }*/
-}
+}*/
 
 /* xBranding section - basic style */
 .cd-branding .cd-box {
@@ -1304,6 +1295,28 @@ section:nth-of-type(9) h2::before {
 
 #typography .cd-box .font_area {
   margin: 0 0 10px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(230,230,230,0.4);
+}
+
+
+.font_area span {
+  font-size: 14px;
+  position: relative;
+  float: right;
+  text-align: right;
+  font-family: 'Montserrat-Light',sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .font_area span {
+    font-size: 12px;
+    display: none;
+  }
+  #typography .cd-box .font_area {
+    border-bottom: none;
+  }
 }
 
 .font_title_before::before{

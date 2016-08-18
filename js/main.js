@@ -71,10 +71,18 @@ jQuery(document).ready(function($){
 			textElement.text(fontFamily+' '+fontSize );
 		}
 
+		function setTop(element, textElement) {
+			var fontHeight = Math.round(element.innerHeight())
+			var linehFix = (element.css('line-height').replace('px','') - element.css('font-size').replace('px',''))/2
+			var fixHeight = Math.round(fontHeight - 30 - linehFix);
+			textElement.css('top',fixHeight+'px');
+		}
+		setTop(heading,headingDescriptionText);
 		setTypography(heading,headingDescriptionText);
 
 		$(window).on('resize', function(){
 			setTypography(heading, headingDescriptionText);
+			setTop(heading,headingDescriptionText);
 		});
 
 	});
