@@ -544,13 +544,13 @@ form fieldset:nth-of-type(2){
   transition: border-color .3s ease-in-out;
 }
 .input-alert:after {
-  content: 'Please show me something real';
+  content: '验证码错误';
   font-size: 12px;
-  left: -256px;
-  top: 28px;
-  position: relative;
+  left: 16px;
+  top: 59px;
+  position: absolute;
   color: #F2555B;
-  font-family: 'Montserrat-Regular','HYQiHei-55',sans-serif;
+  font-family:'Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
   -webkit-transition: border-color .3s ease-in-out;
   transition: border-color .3s ease-in-out;
 }
@@ -576,11 +576,11 @@ form fieldset:nth-of-type(2){
 .input-success:after {
   content: '验证码正确';
   font-size: 12px;
-  left: -256px;
-  top: 28px;
-  position: relative;
+  left: 16px;
+  top: 59px;
+  position: absolute;
   color: #45CE5E;
-  font-family: 'Montserrat-Regular','HYQiHei-60',sans-serif;
+  font-family: 'Montserrat-Regular',-apple-system,Helvetica Neue,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
   -webkit-transition: border-color .3s ease-in-out;
   transition: border-color .3s ease-in-out;
 }
@@ -1422,14 +1422,6 @@ section:nth-of-type(9) h2::before {
     color: #464d5c;
 }
 
-
-
-.icon-Forward:before {
-  content: "\e92e";
-}
-.icon-Backward:before {
-  content: "\e92f";
-}
 .icon-AddArticle:before {
   content: "\e900";
 }
@@ -1442,131 +1434,137 @@ section:nth-of-type(9) h2::before {
 .icon-Apple:before {
   content: "\e903";
 }
-.icon-Bird:before {
+.icon-Backward:before {
   content: "\e904";
 }
-.icon-Bold:before {
+.icon-Bird:before {
   content: "\e905";
 }
-.icon-Camera:before {
+.icon-Bold:before {
   content: "\e906";
 }
-.icon-Copy:before {
+.icon-Camera:before {
   content: "\e907";
 }
-.icon-Crop:before {
+.icon-Copy:before {
   content: "\e908";
 }
-.icon-Delete:before {
+.icon-Crop:before {
   content: "\e909";
 }
-.icon-DeleteImage:before {
+.icon-Delete:before {
   content: "\e90a";
 }
-.icon-Dial:before {
+.icon-DeleteImage:before {
   content: "\e90b";
 }
-.icon-Divide:before {
+.icon-Dial:before {
   content: "\e90c";
 }
-.icon-Dot:before {
+.icon-Divide:before {
   content: "\e90d";
 }
-.icon-Draft:before {
+.icon-Dot:before {
   content: "\e90e";
 }
-.icon-Edit:before {
+.icon-Draft:before {
   content: "\e90f";
 }
-.icon-H1:before {
+.icon-Edit:before {
   content: "\e910";
 }
-.icon-H2:before {
+.icon-Forward:before {
   content: "\e911";
 }
-.icon-Heart:before {
+.icon-H1:before {
   content: "\e912";
 }
-.icon-iMac:before {
+.icon-H2:before {
   content: "\e913";
 }
-.icon-iPhone:before {
+.icon-Heart:before {
   content: "\e914";
 }
-.icon-Link:before {
+.icon-iMac:before {
   content: "\e915";
 }
-.icon-Mail:before {
+.icon-iPhone:before {
   content: "\e916";
 }
-.icon-More:before {
+.icon-Link:before {
   content: "\e917";
 }
-.icon-Note:before {
+.icon-Mail:before {
   content: "\e918";
 }
-.icon-Num:before {
+.icon-More:before {
   content: "\e919";
 }
-.icon-Preview:before {
+.icon-Note:before {
   content: "\e91a";
 }
-.icon-Publish:before {
+.icon-Num:before {
   content: "\e91b";
 }
-.icon-Quote:before {
+.icon-Preview:before {
   content: "\e91c";
 }
-.icon-Rain:before {
+.icon-Publish:before {
   content: "\e91d";
 }
-.icon-Recycle:before {
+.icon-Quote:before {
   content: "\e91e";
 }
-.icon-Replace:before {
+.icon-Rain:before {
   content: "\e91f";
 }
-.icon-Right:before {
+.icon-Recycle:before {
   content: "\e920";
 }
-.icon-ScaleDown:before {
+.icon-Replace:before {
   content: "\e921";
 }
-.icon-ScaleUp:before {
+.icon-Right:before {
   content: "\e922";
 }
-.icon-SendVerify:before {
+.icon-ScaleDown:before {
   content: "\e923";
 }
-.icon-Share:before {
+.icon-ScaleUp:before {
   content: "\e924";
 }
-.icon-Share2:before {
+.icon-SendVerify:before {
   content: "\e925";
 }
-.icon-SmashnEmpty:before {
+.icon-Share:before {
   content: "\e926";
 }
-.icon-UploadImage:before {
+.icon-Share2:before {
   content: "\e927";
 }
-.icon-Waterfall:before {
+.icon-SmashnEmpty:before {
   content: "\e928";
 }
-.icon-Wechat:before {
+.icon-UploadImage:before {
   content: "\e929";
 }
-.icon-Weibo:before {
+.icon-Waterfall:before {
   content: "\e92a";
 }
-.icon-WhiteNoise:before {
+.icon-Wechat:before {
   content: "\e92b";
 }
-.icon-Wind:before {
+.icon-Weibo:before {
+  content: "\e92c";
+}
+.icon-WhiteNoise:before {
   content: "\e92d";
 }
+.icon-Wind:before {
+  content: "\e92e";
+}
 .icon-Wrong:before {
-  content: "\e92c";
+  content: "\e92f";
 }
 
 
