@@ -1435,7 +1435,7 @@ section:nth-of-type(9) h2::before {
   content: "\e903";
 }
 .icon-Backward:before {
-  content: "\e904";
+  content: "\e911";
 }
 .icon-Bird:before {
   content: "\e905";
@@ -1474,7 +1474,7 @@ section:nth-of-type(9) h2::before {
   content: "\e910";
 }
 .icon-Forward:before {
-  content: "\e911";
+  content: "\e904";
 }
 .icon-H1:before {
   content: "\e912";
